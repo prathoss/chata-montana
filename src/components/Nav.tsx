@@ -1,41 +1,42 @@
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-  makeStyles,
-} from '@material-ui/core';
-import React, { useState } from 'react';
-import InfoIcon from '@material-ui/icons/Info';
-import HomeIcon from '@material-ui/icons/Home';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import { Link } from 'react-router-dom';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
-  root: {
-    // width: '100%',
-    // position: 'fixed',
-    // bottom: 0,
-  },
-});
+	grow: {
+		flexGrow: 1,
+	},
+	link: {
+		textDecoration: 'none',
+		color: 'inherit',
+		padding: '0 6px',
+	},
+})
 
-const Nav: React.FunctionComponent = () => {
-  const classes = useStyles();
-  const [value, setValue] = useState(0);
-  return (
-    <BottomNavigation
-      className={classes.root}
-      showLabels
-      value={value}
-      onChange={(e, newValue) => {
-        console.log(newValue);
-        setValue(newValue);
-      }}
-    >
-      <BottomNavigationAction label="O chatě" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Kontakt" icon={<InfoIcon />} />
-      <BottomNavigationAction label="Ceník" icon={<MonetizationOnIcon />} />
-    </BottomNavigation>
-  );
-};
+const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
+	const classes = useStyles()
+	const [t] = useTranslation()
 
-export default Nav;
+	return (
+		<AppBar position="fixed" style={styles} {...otherProps}>
+			<Toolbar>
+				<Link to="/" className={classes.link}>
+					<Typography variant="h1">Montana</Typography>
+				</Link>
+				<div className={classes.grow} />
+				<Link to="/about" className={classes.link}>
+					<Typography variant="h6">{t('about')}</Typography>
+				</Link>
+				<Link to="/about" className={classes.link}>
+					<Typography variant="h6">{t('contact')}</Typography>
+				</Link>
+				<Link to="/prices" className={classes.link}>
+					<Typography variant="h6">{t('prices')}</Typography>
+				</Link>
+			</Toolbar>
+		</AppBar>
+	)
+}
+
+export default Nav

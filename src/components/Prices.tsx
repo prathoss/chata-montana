@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Prices: React.FunctionComponent = () => {
-  return <p>This is prices page</p>;
-};
+	return <p>This is prices page</p>
+}
 
-export default Prices;
+export default Prices
