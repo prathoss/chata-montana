@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Krkonošská chata Montana</title>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Webová stránka pro Krkonošskou chatu Montana"
     />
     <link rel="icon" href="favicon.png" />
     <title>Chata Montana</title>
+    <!-- https://schema.org/Suite -->
+    <script type="application/ld+json">
+      {
+        "@context" : "http://schema.org",
+        "@type" : "House",
+        "name" : "Montana",
+        "telephone" : "+420 272 760 329",
+        "address" : {
+          "@type" : "PostalAddress",
+          "streetAddress" : "Horní Rokytnice 26",
+          "addressLocality" : "Rokytnice nad Jizerou",
+          "addressRegion" : "Krkonoše"
+        },
+        "url" : "https://www.montana-alter.cz/",
+        "image" : "https://www.montana-alter.cz/images/montana.jpg",
+        "latitude" : "50.7227933",
+        "longitude" : "15.4575081",
+        "numberOfBedrooms" : 4,
+        "numberOfFullBathrooms" : 4
+      }
+    </script>
   </head>
   <body style="margin: 0;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
