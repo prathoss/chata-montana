@@ -21,7 +21,10 @@ const useStyles = makeStyles({
 		padding: '0 6px',
 	},
 	select: {
-		paddingLeft: '6px',
+		paddingLeft: '12px',
+	},
+	flag: {
+		width: '20px',
 	},
 })
 
@@ -54,16 +57,16 @@ const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
 					className={classes.select}
 				>
 					<MenuItem value="en">
-						<Flag code="GB" />
+						<Flag code="GB" className={classes.flag} />
 					</MenuItem>
 					<MenuItem value="cs">
-						<Flag code="CZ" />
+						<Flag code="CZ" className={classes.flag} />
 					</MenuItem>
 					<MenuItem value="de">
-						<Flag code="DE" />
+						<Flag code="DE" className={classes.flag} />
 					</MenuItem>
 					<MenuItem value="pl">
-						<Flag code="PL" />
+						<Flag code="PL" className={classes.flag} />
 					</MenuItem>
 				</Select>
 			</Toolbar>
