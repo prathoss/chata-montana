@@ -42,7 +42,7 @@ const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
 				<Link to="/about" className={classes.link}>
 					<Typography variant="h6">{t('about')}</Typography>
 				</Link>
-				<Link to="/about" className={classes.link}>
+				<Link to="/contact" className={classes.link}>
 					<Typography variant="h6">{t('contact')}</Typography>
 				</Link>
 				<Link to="/prices" className={classes.link}>

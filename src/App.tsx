@@ -8,6 +8,7 @@ import Prices from './components/Prices'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import CustomTheme from './theming/theme'
 import './i18n'
+import Contact from './components/Contact'
 
 function App() {
 	const matches = useMediaQuery(CustomTheme.breakpoints.down('xs'))
@@ -39,6 +40,9 @@ function App() {
 							</Route>
 							<Route path="/about">
 								<About />
+							</Route>
+							<Route path="/contact">
+								<Contact />
 							</Route>
 							<Route path="/">
 								<Home />
