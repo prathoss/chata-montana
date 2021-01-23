@@ -8,7 +8,6 @@ import room from '../images/room.jpg'
 import room2 from '../images/room2.jpg'
 import shower from '../images/shower.jpg'
 import shower2 from '../images/shower2.jpg'
-import shower3 from '../images/shower3.jpg'
 import sink from '../images/sink.jpg'
 import tables from '../images/tables.jpg'
 import toilet from '../images/toilet.jpg'
@@ -37,9 +36,6 @@ const About: React.FunctionComponent = () => {
 			original: shower2,
 		},
 		{
-			original: shower3,
-		},
-		{
 			original: sink,
 		},
 		{
@@ -49,7 +45,7 @@ const About: React.FunctionComponent = () => {
 			original: toilet,
 		},
 	]
-	return <ImageGallery items={images} showThumbnails={false} />
+	return <ImageGallery items={images} showThumbnails={false} showBullets />
 }
 
 export default About
