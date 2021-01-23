@@ -28,24 +28,26 @@ function App() {
 	}
 
 	return (
-		<ThemeProvider theme={CustomTheme}>
-			<Router>
-				<Nav styles={navStyle} />
-				<Container style={containerStyle}>
-					<Switch>
-						<Route path="/prices">
-							<Prices />
-						</Route>
-						<Route path="/about">
-							<About />
-						</Route>
-						<Route path="/">
-							<Home />
-						</Route>
-					</Switch>
-				</Container>
-			</Router>
-		</ThemeProvider>
+		<Suspense fallback="loading">
+			<ThemeProvider theme={CustomTheme}>
+				<Router>
+					<Nav styles={navStyle} />
+					<Container style={containerStyle}>
+						<Switch>
+							<Route path="/prices">
+								<Prices />
+							</Route>
+							<Route path="/about">
+								<About />
+							</Route>
+							<Route path="/">
+								<Home />
+							</Route>
+						</Switch>
+					</Container>
+				</Router>
+			</ThemeProvider>
+		</Suspense>
 	)
 }
 
