@@ -56,20 +56,20 @@ const Contact: React.FunctionComponent = () => {
         >
           🏡 {t('address')}
         </Typography>
-        <Typography>
-          <div
-            itemProp="address"
-            itemScope
-            itemType="https://schema.org/PostalAddress"
-          >
+        <div
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
+          <Typography>
             {t('street')}:{' '}
             <span itemProp="streetAddress">Horní Rokytnice 26</span>
             <br />
             {t('locality')}:{' '}
             <span itemProp="addressLocality">Rokytnice nad Jizerou</span>,{' '}
             <span itemProp="postalCode">512 44</span>
-          </div>
-        </Typography>
+          </Typography>
+        </div>
       </Card>
       <img src={map} alt="map" className={classes.map} />
     </div>

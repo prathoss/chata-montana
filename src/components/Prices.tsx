@@ -58,16 +58,18 @@ const Prices: React.FunctionComponent = () => {
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
-            <TableCell>
-              <Typography variant="h3" className={classes.title}>
-                {t('date')}
-              </Typography>
-            </TableCell>
-            <TableCell align="right">
-              <Typography variant="h3" className={classes.title}>
-                {t('pricePerWeek')}
-              </Typography>
-            </TableCell>
+            <TableRow>
+              <TableCell>
+                <Typography variant="h3" className={classes.title}>
+                  {t('date')}
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="h3" className={classes.title}>
+                  {t('pricePerWeek')}
+                </Typography>
+              </TableCell>
+            </TableRow>
           </TableHead>
           <TableBody>
             {prices.map((e) => (

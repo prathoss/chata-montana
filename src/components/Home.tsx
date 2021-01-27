@@ -45,14 +45,12 @@ const Home: React.FunctionComponent = () => {
         <Typography variant="h3" className={classes.title}>
           {t('homeTitle')}
         </Typography>
+        <Typography>{t('homeDescription')}</Typography>
         <Typography>
-          <p>{t('homeDescription')}</p>
-          <p>
-            <span className={classes.emoticon}>🚭</span> {t('noSmoking')}
-          </p>
-          <p>
-            <span className={classes.emoticon}>🐶</span> {t('dogFriendly')}
-          </p>
+          <span className={classes.emoticon}>🚭</span> {t('noSmoking')}
+        </Typography>
+        <Typography>
+          <span className={classes.emoticon}>🐶</span> {t('dogFriendly')}
         </Typography>
       </Paper>
       <Accordion>
