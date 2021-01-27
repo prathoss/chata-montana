@@ -1,14 +1,24 @@
 import { Card, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import map from '../images/map.jpg'
 
 const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center',
+  },
   card: {
     padding: '14px',
     margin: '5px',
   },
   contactTitle: {
     fontSize: '1.5rem',
+  },
+  map: {
+    maxWidth: '100%',
+    marginTop: '15px',
   },
 })
 
@@ -17,14 +27,14 @@ const Contact: React.FunctionComponent = () => {
   const classes = useStyles()
 
   return (
-    <>
+    <div className={classes.root}>
       <Card variant="outlined" className={classes.card}>
         <Typography
           variant="h3"
           color="textSecondary"
           className={classes.contactTitle}
         >
-          {t('reservationContact')}
+          {t('reservationContact')} - Nakladatelství Alter
         </Typography>
         <Typography>
           📞 {t('telephone')}:{' '}
@@ -61,7 +71,8 @@ const Contact: React.FunctionComponent = () => {
           </div>
         </Typography>
       </Card>
-    </>
+      <img src={map} alt="map" className={classes.map} />
+    </div>
   )
 }
 
