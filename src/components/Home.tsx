@@ -1,5 +1,12 @@
-import { makeStyles, Typography } from '@material-ui/core'
+import {
+  Accordion,
+  AccordionSummary,
+  makeStyles,
+  Typography,
+} from '@material-ui/core'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
 import Paper from '@material-ui/core/Paper'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import montanaImg from '../images/montana.jpg'
@@ -16,6 +23,9 @@ const useStyles = makeStyles({
   paper: {
     marginTop: '25px',
     padding: '14px',
+  },
+  emoticon: {
+    fontSize: '1.5rem',
   },
 })
 
@@ -37,10 +47,30 @@ const Home: React.FunctionComponent = () => {
         </Typography>
         <Typography>
           <p>{t('homeDescription')}</p>
-          <p>🚭 {t('noSmoking')}</p>
-          <p>🐶 {t('dogFriendly')}</p>
+          <p>
+            <span className={classes.emoticon}>🚭</span> {t('noSmoking')}
+          </p>
+          <p>
+            <span className={classes.emoticon}>🐶</span> {t('dogFriendly')}
+          </p>
         </Typography>
       </Paper>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography variant="h3" className={classes.title}>
+            🎿 {t('winterSeason')}
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails></AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography variant="h3" className={classes.title}>
+            🚵‍♂️ {t('summerSeason')}
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails></AccordionDetails>
+      </Accordion>
     </>
   )
 }
