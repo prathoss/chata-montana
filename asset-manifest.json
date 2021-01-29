@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/chata-montana/static/js/main.286a03d8.chunk.js",
-    "main.js.map": "/chata-montana/static/js/main.286a03d8.chunk.js.map",
+    "main.js": "/chata-montana/static/js/main.7b6f852c.chunk.js",
+    "main.js.map": "/chata-montana/static/js/main.7b6f852c.chunk.js.map",
     "runtime-main.js": "/chata-montana/static/js/runtime-main.9414fb84.js",
     "runtime-main.js.map": "/chata-montana/static/js/runtime-main.9414fb84.js.map",
     "static/css/2.ea11fe1c.chunk.css": "/chata-montana/static/css/2.ea11fe1c.chunk.css",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.9414fb84.js",
     "static/css/2.ea11fe1c.chunk.css",
     "static/js/2.212c35a0.chunk.js",
-    "static/js/main.286a03d8.chunk.js"
+    "static/js/main.7b6f852c.chunk.js"
   ]
 }
