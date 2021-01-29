@@ -31,7 +31,7 @@ function App() {
 	return (
 		<Suspense fallback="loading">
 			<ThemeProvider theme={CustomTheme}>
-				<Router>
+				<Router basename="/chata-montana">
 					<Nav styles={navStyle} />
 					<Container style={containerStyle}>
 						<Switch>

@@ -55,6 +55,7 @@ const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
 					}
 					disableUnderline
 					className={classes.select}
+					defaultValue={'en'}
 				>
 					<MenuItem value="en">
 						<Flag code="GB" className={classes.flag} />
