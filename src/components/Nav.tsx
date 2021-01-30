@@ -32,6 +32,25 @@ const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
 	const classes = useStyles()
 	const [t, i18n] = useTranslation()
 
+	const langs = [
+		{
+			key: 'en',
+			code: 'GB',
+		},
+		{
+			key: 'cs',
+			code: 'CZ',
+		},
+		{
+			key: 'de',
+			code: 'DE',
+		},
+		{
+			key: 'pl',
+			code: 'PL',
+		},
+	]
+
 	return (
 		<AppBar position="fixed" style={styles} {...otherProps}>
 			<Toolbar>
@@ -49,25 +68,22 @@ const Nav = ({ styles, ...otherProps }: { styles: React.CSSProperties }) => {
 					<Typography variant="h6">{t('prices')}</Typography>
 				</Link>
 				<Select
-					value={i18n.language}
+					value={
+						langs.find((l) => l.key === i18n.language)
+							? i18n.language
+							: i18n.options.fallbackLng
+					}
 					onChange={(e: React.ChangeEvent<{ value: unknown }>) =>
 						i18n.changeLanguage(e.target.value as string)
 					}
 					disableUnderline
 					className={classes.select}
 				>
-					<MenuItem value="en">
-						<Flag code="GB" className={classes.flag} />
-					</MenuItem>
-					<MenuItem value="cs">
-						<Flag code="CZ" className={classes.flag} />
-					</MenuItem>
-					<MenuItem value="de">
-						<Flag code="DE" className={classes.flag} />
-					</MenuItem>
-					<MenuItem value="pl">
-						<Flag code="PL" className={classes.flag} />
-					</MenuItem>
+					{langs.map((l) => (
+						<MenuItem key={l.key} value={l.key}>
+							<Flag code={l.code} className={classes.flag} />
+						</MenuItem>
+					))}
 				</Select>
 			</Toolbar>
 		</AppBar>
